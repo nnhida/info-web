@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Server dan Client</title>
+</head>
+<body>
+    <h1>Informasi Server dan Client</h1>
+
+    <?php
+    // Menyimpan hostname server
+    $server_name = gethostname();
+
+    // Menyimpan alamat IP client
+    $client_ip = $_SERVER['REMOTE_ADDR'];
+
+    // Menyimpan waktu akses client
+    $access_time = date('Y-m-d H:i:s');
+    ?>
+
+    <p><strong>Hostname Server:</strong> <?php echo $server_name; ?></p>
+    <p><strong>Alamat IP Client:</strong> <?php echo $client_ip; ?></p>
+    <p><strong>Waktu Akses Client:</strong> <?php echo $access_time; ?></p>
+
+</body>
+</html>
